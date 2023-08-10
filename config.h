@@ -17,6 +17,7 @@ static char *lapse_names[6] = {
 
 /* Mark of plural */
 static char *plural = "s";
+static char *conjunction = "and";
 
 /* if the language has a different way of making plurals
  * uncomment this piece and define each lapse manually.

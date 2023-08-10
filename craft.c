@@ -22,12 +22,12 @@ void make_string(struct Times *t, char **string) {
 	int s = t->secs;
 	if (s > 0) {
 #ifndef DIFF_PREF_PL
-		sprintf(*string, "%sand %d %s%s.", *string, s, lapse_names[4], (s > 1 ? plural : ""));
+		sprintf(*string, "%s%s %d %s%s.", *string, conjunction, s, lapse_names[4], (s > 1 ? plural : ""));
 #else
 		if (s > 1)
-			sprintf(*string, "%sand %d %s.", *string, s, lapse_plurals[4]);
+			sprintf(*string, "%s%s %d %s.", *string, conjuction, s, lapse_plurals[4]);
 		else
-			sprintf(*string, "%sand %d %s.", *string, s, lapse_names[4]);
+			sprintf(*string, "%s%s %d %s.", *string, conjuction, s, lapse_names[4]);
 #endif
 	} else {
 		sprintf(*string, "%s%s.", *string, lapse_names[5]);
